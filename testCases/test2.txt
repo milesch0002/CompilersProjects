@@ -1,0 +1,10 @@
+int num1 = 5;
+double num2 = 3.5;
+
+void same(int i, double j) {
+    if (i == j) {
+        std::cout << "same";
+    } else {
+        std::cout << "not the same";
+    }
+}
