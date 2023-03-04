@@ -2,16 +2,25 @@
 #include <string>
 #include <fstream>
 
-using namespace std;
+#include "src/CodeAnalyzer.h"
+
+inline bool exists (const std::string& name) {
+  if (FILE *file = fopen(name.c_str(), "r")) {
+    fclose(file);
+    return true;
+  } else {
+    return false;
+  }   
+}
 
 int main() {
-    fstream file("testCases/test1.txt");
+  if (exists("testCases/code.txt")) {
+    std::fstream infile("testCases/code.txt");
+    CodeAnalyzer(infile);
+  } else {
+    std::fstream infile("testCases/test1.txt");
+    CodeAnalyzer(infile);
+  }
 
-    string str;
-
-    while (getline(file, str)) {
-        cout << str;
-    }
-
-    return 0;
+  return 0;
 }

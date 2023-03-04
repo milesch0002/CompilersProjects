@@ -1,0 +1,23 @@
+int finalGrade () {
+   
+   char grade;
+    grade = 'A';
+
+   switch(grade) {
+      case 'A' :
+         cout << "You got an A" << endl; 
+         break;
+      case 'B' :
+        cout << "You got a B" << endl;
+        break;
+      case 'C' :
+         cout << "You got a C" << endl;
+         break;
+      case 'D' :
+         cout << "You got a D" << endl;
+         break;
+      case 'F' :
+         cout << "You got a F" << endl;
+   }
+   cout << grade << endl;
+}
