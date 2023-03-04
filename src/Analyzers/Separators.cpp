@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Separators.h"
+#include "../Headers/Separators.h"
 
 // Function that returns if a character is a separtors
 bool Separators(char c) {

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Whitespace.h"
+#include "../Headers/Whitespace.h"
 
 // Function that returns if a character is a whitespace
 bool Whitespace(char c) {

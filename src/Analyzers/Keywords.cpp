@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Keywords.h"
+#include "../Headers/Keywords.h"
 
 // Function that returns if a character is a keyword
 bool Keywords(std::string str) {

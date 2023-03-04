@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Digits.h"
+#include "../Headers/Digits.h"
 
 // Function that returns if a character is a digit
 bool Digits(char c) {

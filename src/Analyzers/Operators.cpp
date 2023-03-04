@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Operators.h"
+#include "../Headers/Operators.h"
 
 // Function that returns if a character is a Operators
 bool Operators(char c) {

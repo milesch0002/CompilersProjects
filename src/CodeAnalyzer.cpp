@@ -1,16 +1,16 @@
-#include <fstream>
 #include <iostream>
+#include <fstream>
 #include <vector>
 
-#include "CodeAnalyzer.h"
+#include "Headers/CodeAnalyzer.h"
 
 // Functions for checking characters
-#include "Analyzers/Characters/Characters.h"
-#include "Analyzers/Digits/Digits.h"
-#include "Analyzers/Keywords/Keywords.h"
-#include "Analyzers/Operators/Operators.h"
-#include "Analyzers/Separators/Separators.h"
-#include "Analyzers/Whitespace/Whitespace.h"
+#include "Headers/Characters.h"
+#include "Headers/Digits.h"
+#include "Headers/Keywords.h"
+#include "Headers/Operators.h"
+#include "Headers/Separators.h"
+#include "Headers/Whitespace.h"
 
 using namespace std;
 
@@ -22,7 +22,7 @@ public:
 };
 
 // Function that goes through the code given
-void CodeAnalyzer(fstream &code) {
+void CodeAnalyzer(ifstream& code) {
   string str;
   char ch;
   bool isQoute = false;
@@ -132,5 +132,5 @@ void CodeAnalyzer(fstream &code) {
   // Prints the last item
   cout << currentItem.type << " " << currentItem.value << endl;
 
-  return;
+  // return 0;
 }

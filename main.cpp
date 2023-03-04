@@ -2,9 +2,11 @@
 #include <string>
 #include <fstream>
 
-#include "src/CodeAnalyzer.h"
+#include "src/Headers/CodeAnalyzer.h"
 
-inline bool exists (const std::string& name) {
+using namespace std;
+
+inline bool exists (const string& name) {
   if (FILE *file = fopen(name.c_str(), "r")) {
     fclose(file);
     return true;
@@ -15,11 +17,12 @@ inline bool exists (const std::string& name) {
 
 int main() {
   if (exists("testCases/code.txt")) {
-    std::fstream infile("testCases/code.txt");
+    ifstream infile("testCases/code.txt");
     CodeAnalyzer(infile);
   } else {
-    std::fstream infile("testCases/test1.txt");
+    ifstream infile("testCases/test1.txt");
     CodeAnalyzer(infile);
+    infile.close();
   }
 
   return 0;
